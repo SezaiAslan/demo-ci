@@ -1,6 +1,5 @@
 {
   "Parameters": {
-    "DockerImageRepository": "demo-api",
-    "ImageTag": "latest"
+    "test": "demo-api"
   }
 }

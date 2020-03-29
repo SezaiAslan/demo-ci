@@ -91,7 +91,7 @@ Resources:
   ArtifactsBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub io.forumstar.codepipeline.${ProjectName}
+      BucketName: !Sub io.codepipeline.${ProjectName}
       LifecycleConfiguration:
         Rules:
           - Id: DeleteBuildArtifactsAfterOneWeek

@@ -7,4 +7,6 @@ Resources:
   VPC:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: !Sub cf-templates/vpc.yaml
+      TemplateURL: !Sub "${test}vpc.yaml"
+      Parameters:
+        VPCName: "TEST-VPC"
