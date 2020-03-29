@@ -36,7 +36,7 @@ Resources:
                 Owner: !Ref RepositoryOwner
                 Repo: !Ref RepositoryName
                 Branch: !Ref RepositoryBranch
-                OAuthToken: "{{resolve:ssm:fortis-github-token}}"
+                OAuthToken: "{{resolve:ssm:fortis-github-token:1}}"
               OutputArtifacts:
                 - Name: SourceOutput
         - Name: Build

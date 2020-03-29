@@ -20,4 +20,4 @@ Resources:
     Properties:
       TemplateURL: !Sub cf-templates/vpc.yaml
       Parameters:
-        VPCName: "TEST222"
+        VPCName: "TEST-VPC"

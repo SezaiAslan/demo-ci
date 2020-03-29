@@ -5,7 +5,9 @@ RepositoryOwner="SezaiAslan"
 RepositoryName="demo-ci"
 RepositoryBranch="master"
 
-aws cloudformation delete-stack --stack-name ${ProjectName}-pipeline \
+aws cloudformation deploy --stack-name ${ProjectName}-pipeline \
+	--no-fail-on-empty-changeset \
+  --template-file cf-templates/pipeline.yaml \
 	--parameter-overrides \
 		ProjectName="${ProjectName}" \
 		RepositoryOwner="${RepositoryOwner}" \
