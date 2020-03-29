@@ -10,7 +10,7 @@ phases:
     commands:
       - aws cloudformation package --template-file cf-templates/template.yaml --s3-bucket $S3_BUCKET --output-template-file template-output.yaml
       - echo $S3_BUCKET
-      - aws s3 sync cf-templates/ s3://$S3_BUCKET/
+      - aws s3 sync cf-templates/ "s3://{$S3_BUCKET}/"
 
 artifacts:
   files: # All the files which makes out of the build stage and shall be forwarded to the next stage are mentioned here. Every other file is no more available in the pipeline
