@@ -163,6 +163,7 @@ Resources:
                   - s3:PutObject
                   - s3:ListBucket
                 Resource:
+                  - !Sub arn:aws:s3:::${ArtifactsBucket}
                   - !Sub arn:aws:s3:::${ArtifactsBucket}/*
 
 
