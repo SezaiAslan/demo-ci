@@ -8,7 +8,7 @@ phases:
 
   pre_build:
     commands:
-      - aws cloudformation package --template-file cf-templates/template.yaml --s3-bucket $S3_BUCKET --output-template-file template-output.yaml # ???
+      - aws cloudformation package --template-file cf-templates/template.yaml --s3-bucket $S3_BUCKET --output-template-file template-output.yaml
 
 artifacts:
   files: # All the files which makes out of the build stage and shall be forwarded to the next stage are mentioned here. Every other file is no more available in the pipeline
