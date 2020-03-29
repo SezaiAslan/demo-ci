@@ -312,3 +312,9 @@ Resources:
                   #Resource:
                   #- !Sub arn:aws:cloudformation:${AWS::Region}:aws:transform/Serverless-2016-10-31
                   #- !Sub arn:aws:cloudformation:${AWS::Region}:aws:transform/Include
+              - Effect: Allow
+                Action:
+                  - s3:*
+                Resource:
+                  - !Sub arn:aws:s3:::${ArtifactsBucket}
+                  - !Sub arn:aws:s3:::${ArtifactsBucket}/*
