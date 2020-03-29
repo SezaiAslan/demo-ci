@@ -7,4 +7,4 @@ Resources:
   VPC:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: !Sub "https://s3.eu-central-1.amazonaws.com/io.codepipeline.demo-ci/vpc.yaml"
+      TemplateURL:  "https://s3.eu-central-1.amazonaws.com/io.codepipeline.demo-ci/vpc.yaml"
