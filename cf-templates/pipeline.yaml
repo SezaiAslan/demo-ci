@@ -196,6 +196,7 @@ Resources:
                 Action:
                   - s3:*
                 Resource:
+                  - !Sub arn:aws:s3:::${ArtifactsBucket}
                   - !Sub arn:aws:s3:::${ArtifactsBucket}/*
               - Effect: Allow
                 Action:
