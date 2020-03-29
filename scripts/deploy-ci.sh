@@ -2,11 +2,12 @@
 
 ProjectName="demo-ci"
 RepositoryOwner="SezaiAslan"
-RepositoryName="demo-ci"
+RepositoryName="demo-api"
 RepositoryBranch="master"
 
 aws cloudformation deploy --stack-name ${ProjectName}-pipeline \
 	--no-fail-on-empty-changeset \
+	--capabilities CAPABILITY_NAMED_IAM CAPABILITY_IAM \
   --template-file cf-templates/pipeline.yaml \
 	--parameter-overrides \
 		ProjectName="${ProjectName}" \
