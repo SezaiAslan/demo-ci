@@ -1,0 +1,23 @@
+Description: >
+Parameters:
+  S3TemplateKeyPrefix:
+    Description: >
+      An S3 key prefix which will be used to resolve referenced templates
+    Type: String
+  GitHubBranch:
+    Type: String
+  GitHubUser:
+    Type: String
+  GitHubRepo:
+    Type: String
+  GitHubToken:
+    Type: String
+
+Resources:
+
+  VPC:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub cf-templates/vpc.yaml
+      Parameters:
+        VPCName: "TEST222"
