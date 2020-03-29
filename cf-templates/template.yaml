@@ -3,8 +3,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: "Template"
 
 Resources:
-
   VPC:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: "https://s3.amazonaws.com/io.codepipeline.demo-ci/vpc.yaml"
+      TemplateURL: "https://s3.eu-central-1.amazonaws.com/io.codepipeline.demo-ci/vpc.yaml"
