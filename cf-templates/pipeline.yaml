@@ -231,6 +231,7 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
+                  - ec2:allocateAddress
                   - ec2:CreateVpc
                   - ec2:DescribeVpcs
                   - ec2:DeleteVpc
