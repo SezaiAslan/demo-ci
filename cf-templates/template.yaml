@@ -7,3 +7,10 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Properties:
       TemplateURL: "https://s3.eu-central-1.amazonaws.com/io.codepipeline.demo-ci/vpc.yaml"
+
+  DynamoDB:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: "https://s3.eu-central-1.amazonaws.com/io.codepipeline.demo-ci/dynamodb.yaml"
+      Parameters:
+        - TableName: "Test DB - CI"
