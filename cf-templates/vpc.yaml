@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 
-Description: "Creates a VPC"
+Description: "Creates a VPC Resource"
 Parameters:
   VPCName:
     Description: The name of the VPC being created.
