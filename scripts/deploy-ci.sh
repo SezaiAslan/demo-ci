@@ -2,7 +2,7 @@
 
 ProjectName="demo-ci"
 RepositoryOwner="SezaiAslan"
-RepositoryName="demo-api"
+RepositoryName="demo-ci"
 RepositoryBranch="master"
 
 aws cloudformation deploy --stack-name ${ProjectName}-pipeline \

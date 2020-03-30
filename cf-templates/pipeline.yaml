@@ -134,6 +134,7 @@ Resources:
           PolicyDocument:
             Version: 2012-10-17
             Statement:
+              -
               - Effect: Allow
                 Action:
                   - codebuild:BatchGetBuilds
@@ -184,6 +185,14 @@ Resources:
           PolicyDocument:
             Version: 2012-10-17
             Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource:
+                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${ProjectName}-build-package
+                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${ProjectName}-build-package:*
               - Effect: Allow
                 Action:
                   - s3:*
