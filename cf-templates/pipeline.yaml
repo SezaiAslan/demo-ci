@@ -231,6 +231,7 @@ Resources:
                   - ec2:DeleteVpc
                   - ec2:ModifyVpcAttribute
                   - ec2:createTags
+                  - dynamodb:*
                 Resource:
                   - "*"
               - Effect: Allow
