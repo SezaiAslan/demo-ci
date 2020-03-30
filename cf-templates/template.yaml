@@ -13,4 +13,4 @@ Resources:
     Properties:
       TemplateURL: "https://s3.eu-central-1.amazonaws.com/io.codepipeline.demo-ci/dynamodb.yaml"
       Parameters:
-        TableName: "TestDB-CI"
+        TableName: "TestDB-CI2"
