@@ -186,14 +186,6 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
-                  - logs:CreateLogGroup
-                  - logs:CreateLogStream
-                  - logs:PutLogEvents
-                Resource:
-                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${ProjectName}-build-package
-                  - !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/codebuild/${ProjectName}-build-package:*
-              - Effect: Allow
-                Action:
                   - s3:*
                 Resource:
                   - !Sub arn:aws:s3:::${ArtifactsBucket}
@@ -203,12 +195,6 @@ Resources:
                   - ecr:*
                 Resource:
                   - "*"
-              - Effect: Allow
-                Action:
-                  - secretsmanager:GetSecretValue
-                Resource:
-                  - arn:aws:secretsmanager:eu-central-1:106060261984:secret:prod/sonar-VhCm9T
-
   #
   # Service role according to https://docs.aws.amazon.com/lambda/latest/dg/build-pipeline.html
   #

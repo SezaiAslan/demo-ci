@@ -18,4 +18,4 @@ Resources:
       InstanceTenancy: default
       Tags:
         - Key: Name
-          Value: "TEST VPC - CI/CO"
+          Value: "TEST VPC - CI/CD"
